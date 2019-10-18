@@ -1,9 +1,9 @@
 version: '3.4'
 
 services:
-    app:
+    aplicacao:
         build: .
-        container_name: app
+        container_name: aplicacao
         entrypoint: dockerize -template ./.docker/app/.env:./.env -wait tcp://db:3306 -timeout 40s ./.docker/entrypoint.sh
         environment:
             - DB_HOST=db
@@ -30,7 +30,7 @@ services:
         networks:
             - app-network
         depends_on:
-            - app
+            - aplicacao
 
     db:
         image: mysql:5.7

@@ -8,7 +8,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && rm dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 
-#COPY .docker ./.docker
+COPY .docker ./.docker
 
 WORKDIR /var/www
 RUN rm -rf /var/www/html
