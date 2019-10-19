@@ -4,7 +4,7 @@ services:
     aplicacao:
         build: .
         container_name: aplicacao
-        entrypoint: dockerize -template ./.docker/app/.env:./.env -wait tcp://db:3306 -timeout 40s ./.docker/entrypoint.sh
+        entrypoint: dockerize -template ./.docker/app/.env:./.env -wait tcp://db:3306 -timeout 40s bash ./.docker/entrypoint.sh
         environment:
             - DB_HOST=db
             - DB_DATABASE=laravel
