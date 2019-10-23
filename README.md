@@ -1,4 +1,4 @@
-Endereço da imagem: https://cloud.docker.com/repository/docker/nettoveloso/app-laravel
+Endereço da imagem Go Lang: https://hub.docker.com/r/nettoveloso/codeeducation
 
 
 * Para instalar execute o comando docker-composer up -d
